@@ -14,13 +14,15 @@
     "babel-preset-stage-0": "^6.24.1",
     "body-parser": "^1.16.1",
     "cookie-parser": "^1.4.3",
+    "crypto-socket": "^3.0.0",
     "debug": "^3.0.0",
     "ejs": "^2.5.7",
     "express": "^4.15.4",
     "morgan": "^1.8.2",
     "passport": "^0.4.0",
     "passport-http-bearer": "^1.0.1",
-    "serve-favicon": "^2.4.3"
+    "serve-favicon": "^2.4.3",
+    "socket.io": "^2.0.4"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

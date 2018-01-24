@@ -51,21 +51,21 @@ process.on('uncaughtException', (err) => {
   process.exit(1);
 });
 
-passport.use(new BearerStrategy(
-  function(token, done) {
-    User.findOne({ token: token }, function (err, user) {
-      if (err) { return done(err); }
-      if (!user) { return done(null, false); }
-      return done(null, user, { scope: 'all' });
-    });
-  }
-));
+// passport.use(new BearerStrategy(
+//   function(token, done) {
+//     User.findOne({ token: token }, function (err, user) {
+//       if (err) { return done(err); }
+//       if (!user) { return done(null, false); }
+//       return done(null, user, { scope: 'all' });
+//     });
+//   }
+// ));
 
-app.get('/profile', 
-  passport.authenticate('bearer', { session: false }),
-  function(req, res) {
-    res.json(req.user);
-  });
+// app.get('/profile', 
+//   passport.authenticate('bearer', { session: false }),
+//   function(req, res) {
+//     res.json(req.user);
+//   });
   
   
 export default app;
